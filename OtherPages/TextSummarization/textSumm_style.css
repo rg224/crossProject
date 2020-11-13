@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins',sans-serif;
+  background: url(cube.jpg) no-repeat;
+  /*background: white;*/
+  /*color: black;*/
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.brand{
+  /*margin-top: 5%;*/
+  font-size: 35px;
+  letter-spacing: 3px;
+  animation: cngclr 2s alternate infinite;
+  user-select: none;
+}
+@keyframes cngclr {
+  0%{
+    color: #d100d1;
+    text-shadow: 0 0 5px #d100d1,
+                0 0 25px #d100d1;
+  }
+  100%{
+    color: #6fffe9;
+    text-shadow: 0 0 5px #6fffe9,
+                0 0 10px #6fffe9,
+                0 0 25px #6fffe9;
+  }
+}
+.brand:hover{
+  text-shadow: 0 0 5px white,
+              0 0 25px white;
+}
+
+.container{
+  /*background: white;*/
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  /*align-items: center;*/
+}
+
+form{
+  width: 90%;
+}
+
+#summarize{
+  height: 50px;
+  width: 100px;
+}
+
+/*.article{
+  float: right;
+  height: 100%;
+  width: 700px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  background: black;
+}*/
