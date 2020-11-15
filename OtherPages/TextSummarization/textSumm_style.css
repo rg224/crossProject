@@ -47,26 +47,85 @@ body{
 .container{
   /*background: white;*/
   margin: auto;
-  height: 500px;
-  width: 500px;
-  display: flex;
+  /*display: flex;*/
+  height: 600px;
+  width: 100%;
   /*align-items: center;*/
 }
 
+.form_group{
+  display: flex;
+  height: 20%;
+  width: 100%;
+  /*background: yellow;*/
+}
+
 form{
+  margin: 1em;
+  float: left;
   width: 90%;
 }
 
-#summarize{
-  height: 50px;
-  width: 100px;
+input{
+  color: white;
 }
 
-/*.article{
+#summarize{
+  margin: 1em;
   float: right;
-  height: 100%;
-  width: 700px;
+  height: 60px;
+  width: 100px;
+  margin-left: 10px;
+  animation: chngclr 2s alternate infinite;
+  outline: none;
+  font-weight: bold;
+}
+
+@keyframes chngclr {
+  0%{
+    background-color: #d100d1;
+    border: 0 0 5px #d100d1,
+                0 0 25px #d100d1;
+  }
+  100%{
+    background-color: #6fffe9;
+    border: 0 0 5px #6fffe9,
+                0 0 10px #6fffe9,
+                0 0 25px #6fffe9;
+  }
+}
+.brand:hover{
+  border: 0 0 5px white,
+              0 0 25px white;
+}
+
+#output{
+  padding: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  background: white;
+  height: 75%;
+  display: none;
   scroll-behavior: smooth;
   overflow-y: scroll;
-  background: black;
-}*/
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e3dfde;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
