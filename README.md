@@ -1,2 +1,2 @@
 # crossProject
-This is NLP Based Virtual Assistant.
+This is the front-end of NLP Based Virtual Assistant.
