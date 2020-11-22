@@ -79,12 +79,12 @@ body{
 }
 
 .chatarea-main {
-  /*position: fixed;*/
+    display: block;
     width: 50%;
     margin: auto;
     margin-top: 1%;
     height: 100%;
-    /*background: black;*/
+    transition: all .5s ease;
 }
 
 .chatarea-outer {
@@ -95,6 +95,8 @@ body{
     overflow-y: auto;
     scroll-behavior: smooth;
     /*background: white;*/
+    transition: all .5s ease;
+
 }
 
 ::-webkit-scrollbar {
@@ -123,7 +125,7 @@ body{
 
 .chatarea-inner {
     float: left;
-    width: 60%;
+    width: 500px;
     padding: 10px;
     color: #fff;
     position: relative;
@@ -139,10 +141,13 @@ body{
 
 .chatarea-inner.chatbot{
     background: #6522A4;
+    border-radius: 30px 0px;
 }
 .chatarea-inner.user{
-    background: #6fffe9;
+    background: #008a75;
     float: right;
+    border-radius: 0px 30px 0px 30px;
+
 }
 
 /*.chatarea-inner.user:before {
@@ -166,47 +171,53 @@ body{
 }*/
 
 .user-area .chatarea-inner{
-	float: left;
+  float: left;
 }
 
 .user_form{
-  display: flex;
   width: 100%;
   float: left;
-  margin-top: 1%;
+  margin-top: 10px;
   /*background: black;*/
-  max-height: 5%;
+  max-height: 50px;
   margin-bottom: 2%;
 }
 
-form{
-  float: left;
+.form{
+  display: flex;
+  flex-direction: row;
   padding: 1%;
 }
 
 textarea{
-  /*float: left;*/
+  text-align: center;
+  font-size: 15px;
   margin-top: 1%;
+  outline: 0;
+  background: grey;
+  color: white;
   border: 1px solid #888; 
+  border-radius: 10px;
   outline: none;
-  margin: 6.54688px 0px 0px; 
+  margin: 6.54688px 10px 0px; 
   width: 559px; 
   height: 32px;
   resize: none;
 }
+textarea:focus{
+  color: white;
+  transform: translateY(-8px);
+  transition: all .5s ease;
+}
 
 #send{
-  float: left;
-  /*margin-top: 2%;*/
   height: 35px;
   width: 35px;
-  margin:10px
+  margin:5px
 }
 
 #mic{
-  float: left;
-  /*margin-top: 2%;*/
   height: 35px;
   width: 35px;
-  margin:10px
+  margin:5px
 }

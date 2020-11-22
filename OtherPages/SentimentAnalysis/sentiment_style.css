@@ -19,6 +19,11 @@ body{
   margin: 0;
 }
 
+/* body> *:not(#show_sentiment) {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */
+
 .brand{
   /*margin-top: 5%;*/
   font-size: 35px;
@@ -45,26 +50,32 @@ body{
               0 0 25px white;
 }
 
-.data{
+#data{
     /* background: white;  */
     margin-top: 30px;
-    width: 100%;
+    width: 85%;
     height: 100px;
+    text-align: center;
 }
 
 /* sentimentCheck.html */
 #show_sentiment {
-    margin-top: 30px;
     width: 75%;
     /* background: antiquewhite; */
     height: 450px;
     /* box-shadow: 10px 10px 25px rgba(0,0,0,0.9); */
-    /* display: none; */
+    display: block;
 }  
 
-#text, #url{
+#text{
     text-decoration: none;
     color: white;
+}
+
+#go{
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
 }
 
 #result {
@@ -85,21 +96,21 @@ body{
     margin-top: 5px;
     width: 100%;
     height: 50px;
-    background: black;
+    /* background: black; */
     color: white;
+    text-align: center;
 }
 
-#positive_review, #negative_review {
+#positive_review{
     color: white;
-    margin-top: 2%;
-    margin-left: 15%;
-    margin-right: 15%;
-    width: 200px;
+    margin-top: 1%;
+    margin-left: 42%;
+    width: 160px;
     height: 200px;
-    background: black;
     scroll-behavior: smooth;
     overflow-y: scroll;
     padding: 5px;
+    border: 2px solid gray;
 }
 
 ::-webkit-scrollbar {
@@ -113,7 +124,7 @@ body{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #e3dfde;
+    background: rgb(207, 205, 205);
     border-radius: 5px;
   }
   
@@ -128,7 +139,8 @@ body{
     color: white;
     width: 400px;
     height: 100px;
-    background: black;
+    /* background: black; */
     padding: 5px;
+    text-align: center;
 }
 
