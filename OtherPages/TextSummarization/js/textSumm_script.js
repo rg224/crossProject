@@ -1,5 +1,6 @@
 var input = document.getElementById('inputfile');
 var output = document.getElementById('output');
+var link = document.getElementById('link');
 
 function handleFileSelect()
 {  
@@ -13,10 +14,16 @@ function handleFileSelect()
                 buttonLabels: false,
             });
             output.style.display = "block";
-            console.log(fr.result)
+            link.style.opacity = "1";
+            // console.log(fr.result)
         } 
+
+        // for download file
+        objectURL = URL.createObjectURL(file);
+        link.download = file.name; // this name is used when the user downloads the file
+        // console.log(link.download);
+        link.href = objectURL;
             
-        // fr.readAsDataURL(file); 
         fr.readAsText(file); 
     }
     else {
